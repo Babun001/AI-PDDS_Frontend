@@ -1,11 +1,14 @@
 import React from 'react';
 
-import Navbar from '../Components/Navbar';
+// import Navbar from '../Components/Navbar';
 
 export default function Home() {
   return (
-    <div>
-      {<Navbar/>}
-    </div>
+    <>
+      <div className='Home-main'>
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat expedita consequatur voluptas quos necessitatibus nesciunt facilis nobis id omnis? Vero ipsa repellat corporis recusandae impedit mollitia laudantium eos suscipit? Excepturi.</h1>
+      </div>
+      
+    </>
   );
 }
