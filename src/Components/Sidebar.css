@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+.sidebar{
+    background: rgb(0,7,61);
+    display: grid;
+    overflow: hidden;
+    justify-content:left;
+    width: 15%;
+    
+}

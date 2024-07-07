@@ -1,23 +1,34 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   overflow: hidden;
   font-family: sans-serif;
-} 
+}
 
 .bg-video {
-   filter: blur(5px);
+  filter: blur(5px);
   -webkit-filter: blur(5px);
-  height: 100%; 
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
-.video-clip{
-  height: 100%;
-  width: 100%;
+
+.site-title {
+  font-weight: bolder;
+  right: 100%;
+  display: flex;
+  justify-content: flex-start;
+  width: 30%;
+  justify-content: center;
+  position: absolute;
+  bottom: 35vh;
+  color: #000000;
 }
 
 .bg-text {
@@ -30,12 +41,17 @@ body {
   width: 60%;
   padding: 20px;
   text-align: center;
+  /* display: inline-block; */
+}
+.bg-text h2 {
+  font-weight: bolder;
 }
 
-.bg-text p{
+.bg-text p {
   font-size: 13px;
   font-weight: lighter;
   font-family: sans-serif;
-  width: 100vh;
+  /* width: 100vh; */
   margin: auto;
 }
+
