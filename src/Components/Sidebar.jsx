@@ -11,7 +11,7 @@ import { IoIosPeople } from "react-icons/io";
 // import { IoCall } from "react-icons/io5";
 
 
-export default function Sidebar() {
+export default function Sidebar({children}) {
     const menuItems = [
         {
             path: "/",
@@ -48,12 +48,15 @@ export default function Sidebar() {
                             <div className="icons">
                                 {route.icon}
                             </div>
-                            <div className="menu">
+                            {/* <div className="menu">
                                 {route.name}
-                            </div>
+                            </div> */}
                         </NavLink>
                     ))}
                 </div>
+                <main>
+                    {children}
+                </main>
             </div>
         </>
     );

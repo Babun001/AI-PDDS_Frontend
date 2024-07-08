@@ -41,7 +41,7 @@ body {
   width: 60%;
   padding: 20px;
   text-align: center;
-  /* display: inline-block; */
+  display: inline-block;
 }
 .bg-text h2 {
   font-weight: bolder;
@@ -51,7 +51,5 @@ body {
   font-size: 13px;
   font-weight: lighter;
   font-family: sans-serif;
-  /* width: 100vh; */
-  margin: auto;
 }
 

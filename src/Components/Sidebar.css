@@ -1,14 +1,14 @@
-*{
-    margin: 0;
-    padding: 0; 
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
 }
-
-.sidebar{
-    background: rgb(0,7,61);
-    display: grid;
-    overflow: hidden;
-    justify-content:left;
+.sidebar-container {
+    /* display: block; */
+}
+.sidebar {
+    /* background-color: transparent; */
+    float: right;
+    height: 100vh;
     width: 15%;
-    
+    border: 2px solid red;
 }
