@@ -11,32 +11,32 @@ import { IoIosPeople } from "react-icons/io";
 // import { IoCall } from "react-icons/io5";
 
 
-export default function Sidebar({children}) {
+export default function Sidebar({ children }) {
     const menuItems = [
         {
             path: "/",
             name: "Home",
-            icon:  <FaHome/> 
-        },
-        {
-            path: "/AboutUs",
-            name: "AboutUs",
-            icon:  <TbCheckupList/> 
-        },
-        {
-            path: "/ContactUs",
-            name: "ContactUs",
-            icon:  <IoIosPeople/> 
+            icon: <FaHome />
         },
         {
             path: "/Service",
             name: "Service",
-            icon:  <FaUserDoctor/> 
+            icon: <FaUserDoctor />
+        },
+        {
+            path: "/AboutUs",
+            name: "AboutUs",
+            icon: <TbCheckupList />
+        },
+        {
+            path: "/ContactUs",
+            name: "ContactUs",
+            icon: <IoIosPeople />
         },
         {
             path: "/info",
             name: "information",
-            icon:  <BsInfoCircleFill/> 
+            icon: <BsInfoCircleFill />
         },
     ]
     return (
@@ -44,15 +44,20 @@ export default function Sidebar({children}) {
             <div className="sidebar-container">
                 <div className="sidebar">
                     {menuItems.map((route) => (
-                        <NavLink to={route.path} key={route.name}>
+                        <NavLink className="navlink" to={route.path} key={route.name}>
                             <div className="icons">
                                 {route.icon}
                             </div>
                             {/* <div className="menu">
                                 {route.name}
                             </div> */}
+
                         </NavLink>
                     ))}
+                    <div className="lowpart">
+                        <button className='btn btn-danger'>*</button>
+                        <button className='btn btn-success'>/</button>
+                    </div>
                 </div>
                 <main>
                     {children}
