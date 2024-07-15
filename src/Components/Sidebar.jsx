@@ -1,4 +1,3 @@
-import React from 'react';
 import './Sidebar.css';
 // import { motion } from "framer-motion"
 
@@ -11,7 +10,16 @@ import { IoIosPeople } from "react-icons/io";
 // import { IoCall } from "react-icons/io5";
 
 
+
+
 export default function Sidebar({ children }) {
+
+    function red(){
+        alert(`Disable the menu!`);
+    }
+    function green(){
+        alert(`Enable the menu!`);
+    }
     const menuItems = [
         {
             path: "/",
@@ -43,6 +51,7 @@ export default function Sidebar({ children }) {
         <>
             <div className="sidebar-container">
                 <div className="sidebar">
+                    
                     {menuItems.map((route) => (
                         <NavLink className="navlink" to={route.path} key={route.name}>
                             <div className="icons">
@@ -54,9 +63,10 @@ export default function Sidebar({ children }) {
 
                         </NavLink>
                     ))}
+
                     <div className="lowpart">
-                        <button className='btn btn-danger'>*</button>
-                        <button className='btn btn-success'>/</button>
+                        <button className='btn btn-danger' onClick={red}>red</button>
+                        <button className='btn btn-success' onClick={green}>green</button>
                     </div>
                 </div>
                 <main>

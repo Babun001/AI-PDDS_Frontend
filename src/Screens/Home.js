@@ -4,7 +4,6 @@ import video01 from "../Assets/Doctor01.mp4"
 // import video02 from "../Assets/Doctor02.mp4"
 // import video03 from "../Assets/Doctor03.mp4"
 
-// import Sidebar from '../Components/Sidebar.jsx';
 
 export default function Home() {
   return (
