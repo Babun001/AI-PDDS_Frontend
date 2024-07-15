@@ -38,7 +38,7 @@ export default function Diabetes() {
                         <div className="form-group mt-3">
                             <label htmlFor="gender">Gender</label>
                             <select className="form-control" style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="gender">
-                                <option selected>Select Gender</option>
+                                <option defaultValue>Select Gender</option>
                                 <option>Male</option>
                                 <option>Female</option>
                                 <option>Other</option>
@@ -47,7 +47,7 @@ export default function Diabetes() {
                         <div className="form-group mt-3">
                             <label htmlFor="pregnancy">Pregnancy</label>
                             <select className="form-control" style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="pregnancy">
-                                <option selected >Are You Pregnat?</option>
+                                <option defaultValue >Are You Pregnat?</option>
                                 <option>Yes</option>
                                 <option>No</option>
                             </select>

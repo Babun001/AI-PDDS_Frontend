@@ -4,7 +4,7 @@
 }
 
 .sidebar {
-  width: 15%;
+  width: 10%;
   float: right;
   height: 100vh;
   /* border: 1px solid black; */
@@ -30,9 +30,4 @@
   margin-top: 3px;
   text-decoration: none;
   color: black;
-}
-.navlink {
-  display: flex;
-  text-decoration: none;
-  /* margin-top: 1rem; */
 }

@@ -57,17 +57,16 @@ export default function Sidebar({ children }) {
                             <div className="icons">
                                 {route.icon}
                             </div>
-                            {/* <div className="menu">
-                                {route.name}
-                            </div> */}
-
                         </NavLink>
                     ))}
+
 
                     <div className="lowpart">
                         <button className='btn btn-danger' onClick={red}>red</button>
                         <button className='btn btn-success' onClick={green}>green</button>
                     </div>
+
+
                 </div>
                 <main>
                     {children}
