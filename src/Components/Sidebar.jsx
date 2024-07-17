@@ -17,10 +17,10 @@ import { MdOutlineWbSunny } from "react-icons/md";
 
 export default function Sidebar({ children }) {
 
-    function red(){
+    function red() {
         alert(`Disable the menu!`);
     }
-    function green(){
+    function green() {
         alert(`Enable the menu!`);
     }
     const menuItems = [
@@ -46,7 +46,7 @@ export default function Sidebar({ children }) {
         },
         {
             path: "/info",
-            name: "information",
+            name: "Information",
             icon: <BsInfoCircleFill />
         },
     ]
@@ -54,20 +54,25 @@ export default function Sidebar({ children }) {
         <>
             <div className="sidebar-container">
                 <div className="sidebar">
-                    
+
                     {menuItems.map((route) => (
                         <NavLink className="navlink" to={route.path} key={route.name}>
                             <div className="icons">
                                 {route.icon}
-                                <span class="tooltiptext">{route.name}</span>
+                                <span class="Icontext">{route.name}</span>
                             </div>
                         </NavLink>
                     ))}
 
 
                     <div className="lowpart">
-                        <div className='icons' onClick={green}>{<MdOutlineWbSunny/>}</div>
-                        <div className='icons' onClick={red}>{<IoSettingsSharp/>}</div>
+                        <div className='icons' onClick={green}>{<MdOutlineWbSunny />}
+                            <span class="Icontext">Help</span>
+                        </div>
+                        <div className='icons' onClick={red}>{<IoSettingsSharp />}
+                            <span class="Icontext">Setting</span>
+
+                        </div>
                     </div>
 
 

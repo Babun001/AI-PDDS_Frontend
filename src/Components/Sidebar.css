@@ -18,7 +18,7 @@
   color: rgb(0, 0, 0);
   text-decoration: none;
   padding: 1.5rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 .menu {
@@ -36,23 +36,13 @@
   /* background-color: red; */
   display: grid;
   justify-content: center;
-  margin-top: 10rem;
+  margin-top: 7rem;
 }
 
-.tooltiptext {
-  visibility: hidden;
-  width: 50px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-}
-
-.icons:hover .tooltiptext {
-  visibility: visible;
+.Icontext{
+  font-size: 0.9rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-decoration: none;
 }
