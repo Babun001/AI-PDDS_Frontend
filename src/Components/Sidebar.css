@@ -4,11 +4,11 @@
 }
 
 .sidebar {
-  width: 10%;
+  /* width: 10%; */
   float: right;
   height: 100vh;
   /* border: 1px solid black; */
-  margin: 1rem;
+  /* margin: 1rem; */
   padding: 2rem 2rem;
   text-align: center;
 }
@@ -19,6 +19,7 @@
   text-decoration: none;
   padding: 1.5rem;
   font-size: 2rem;
+  cursor: pointer;
 }
 .menu {
   width: 100%;
@@ -30,4 +31,28 @@
   margin-top: 3px;
   text-decoration: none;
   color: black;
+}
+.lowpart{
+  /* background-color: red; */
+  display: grid;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 50px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.icons:hover .tooltiptext {
+  visibility: visible;
 }

@@ -59,6 +59,7 @@ export default function Sidebar({ children }) {
                         <NavLink className="navlink" to={route.path} key={route.name}>
                             <div className="icons">
                                 {route.icon}
+                                <span class="tooltiptext">{route.name}</span>
                             </div>
                         </NavLink>
                     ))}
