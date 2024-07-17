@@ -7,6 +7,9 @@ import { FaUserDoctor } from "react-icons/fa6";
 import { TbCheckupList } from "react-icons/tb";
 import { BsInfoCircleFill } from "react-icons/bs";
 import { IoIosPeople } from "react-icons/io";
+
+import { IoSettingsSharp } from "react-icons/io5";
+import { MdOutlineWbSunny } from "react-icons/md";
 // import { IoCall } from "react-icons/io5";
 
 
@@ -62,8 +65,8 @@ export default function Sidebar({ children }) {
 
 
                     <div className="lowpart">
-                        <button className='btn btn-danger' onClick={red}>red</button>
-                        <button className='btn btn-success' onClick={green}>green</button>
+                        <div className='icons' onClick={green}>{<MdOutlineWbSunny/>}</div>
+                        <div className='icons' onClick={red}>{<IoSettingsSharp/>}</div>
                     </div>
 
 

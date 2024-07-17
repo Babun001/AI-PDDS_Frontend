@@ -1,4 +1,4 @@
-.serviceBG {
+.serviceBG{
   background-image: url("../Assets/blured01.png");
   height: 100vh;
   width: 100%;
@@ -50,4 +50,42 @@
 
 .service{
   padding-top: 15rem;
+}
+
+.home-container{
+  /* filter: blur(2px); */
+  /* -webkit-filter: blur(5px); */
+  /* background-image: url('../Assets/doctor02.jpg'); */
+  /* background-color: red;
+  border: 2px solid blueviolet; */
+  /* height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  background-attachment: fixed; */
+}
+
+.home-container{
+  background-image: url("../Assets/doctor02.jpg");
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-text {
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+  position: absolute;
 }
