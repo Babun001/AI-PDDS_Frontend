@@ -2,14 +2,14 @@ import './Sidebar.css';
 // import { motion } from "framer-motion"
 
 import { FaHome } from "react-icons/fa"
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FaUserDoctor } from "react-icons/fa6";
 import { TbCheckupList } from "react-icons/tb";
 import { BsInfoCircleFill } from "react-icons/bs";
 import { IoIosPeople } from "react-icons/io";
 
 import { IoSettingsSharp } from "react-icons/io5";
-import { MdOutlineWbSunny } from "react-icons/md";
+import { MdLiveHelp } from "react-icons/md";
 // import { IoCall } from "react-icons/io5";
 
 
@@ -56,17 +56,17 @@ export default function Sidebar({ children }) {
                 <div className="sidebar">
 
                     {menuItems.map((route) => (
-                        <NavLink className="navlink" to={route.path} key={route.name}>
+                        <NavLink className="navlink" style={{textDecoration:"none"}} to={route.path} key={route.name}>
                             <div className="icons">
                                 {route.icon}
-                                <span class="Icontext">{route.name}</span>
+                                <Link class="Icontext"style={{textDecoration:"none",color:'black'}}  to={route.path}>{route.name}</Link>
                             </div>
                         </NavLink>
                     ))}
 
 
                     <div className="lowpart">
-                        <div className='icons' onClick={green}>{<MdOutlineWbSunny />}
+                        <div className='icons' onClick={green}>{<MdLiveHelp />}
                             <span class="Icontext">Help</span>
                         </div>
                         <div className='icons' onClick={red}>{<IoSettingsSharp />}

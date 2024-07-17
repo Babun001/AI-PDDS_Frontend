@@ -1,4 +1,4 @@
-.serviceBG{
+.serviceBG {
   background-image: url("../Assets/blured01.png");
   height: 100vh;
   width: 100%;
@@ -39,7 +39,7 @@
   text-decoration: none;
 }
 
-.allbtns{
+.allbtns {
   display: flex;
   justify-content: center;
   position: static;
@@ -48,11 +48,11 @@
   flex-wrap: wrap;
 }
 
-.service{
+.service {
   padding-top: 15rem;
 }
 
-.home-container{
+.home-container {
   /* filter: blur(2px); */
   /* -webkit-filter: blur(5px); */
   /* background-image: url('../Assets/doctor02.jpg'); */
@@ -69,7 +69,7 @@
   background-attachment: fixed; */
 }
 
-.home-container{
+.home-container {
   background-image: url("../Assets/doctor02.jpg");
   height: 100vh;
   width: 100%;
@@ -88,4 +88,36 @@
   text-align: center;
   display: inline-block;
   position: absolute;
+}
+
+.dashbord {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  position: absolute;
+  top: 65%;
+  margin-left: 25%;
+  gap: 2rem;
+}
+
+.card {
+  height: 11rem;
+  gap: 5px;
+  justify-content: flex-start;
+  align-content: center;
+
+}
+.dash{
+  cursor: none;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.CountNumbers {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.CountText {
+  background-color: red;
 }
