@@ -107,11 +107,11 @@
   align-content: center;
 
 }
-.dash{
+/* .icons{
   cursor: none;
   font-size: 2rem;
   padding: 1rem;
-}
+} */
 
 .CountNumbers {
   font-size: 2rem;
@@ -119,5 +119,5 @@
 }
 
 .CountText {
-  background-color: red;
+  /* background-color: red; */
 }

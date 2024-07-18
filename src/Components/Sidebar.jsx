@@ -59,7 +59,7 @@ export default function Sidebar({ children }) {
                         <NavLink className="navlink" style={{textDecoration:"none"}} to={route.path} key={route.name}>
                             <div className="icons">
                                 {route.icon}
-                                <Link class="Icontext"style={{textDecoration:"none",color:'black'}}  to={route.path}>{route.name}</Link>
+                                <Link className="Icontext"style={{textDecoration:"none",color:'black'}}  to={route.path}>{route.name}</Link>
                             </div>
                         </NavLink>
                     ))}
@@ -67,10 +67,10 @@ export default function Sidebar({ children }) {
 
                     <div className="lowpart">
                         <div className='icons' onClick={green}>{<MdLiveHelp />}
-                            <span class="Icontext">Help</span>
+                            <span className="Icontext">Help</span>
                         </div>
                         <div className='icons' onClick={red}>{<IoSettingsSharp />}
-                            <span class="Icontext">Setting</span>
+                            <span className="Icontext">Setting</span>
 
                         </div>
                     </div>

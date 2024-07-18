@@ -24,35 +24,35 @@ export default function Home() {
 
 
         <div className="dashbord">
-          <div className="card" style={{ width: '10rem' }}>
+          <div className="card" style={{ width: '10rem',backgroundColor:'transparent' }}>
             <div className="icons">{<HiUserGroup />}</div>
             <span className='CountNumbers'>0000</span>
             <span className='CountText'>Users</span>
           </div>
 
 
-          <div className="card" style={{ width: '10rem' }}>
+          <div className="card" style={{ width: '10rem',backgroundColor:'transparent' }}>
             <div className="icons">{<FaHandHoldingMedical />}</div>
             <span className='CountNumbers'>0000</span>
             <span className='CountText'>No. of Disease</span>
           </div>
 
 
-          <div className="card" style={{ width: '10rem' }}>
+          <div className="card" style={{ width: '10rem',backgroundColor:'transparent' }}>
             <div className="icons">{<ImHappy />}</div>
             <span className='CountNumbers'>0000</span>
             <span className='CountText'>5-star Rating</span>
           </div>
 
 
-          <div className="card" style={{ width: '10rem' }}>
-            <div className="icons-dash">{<BsGraphUpArrow />}</div>
+          <div className="card" style={{ width: '10rem',backgroundColor:'transparent' }}>
+            <div className="icons">{<BsGraphUpArrow />}</div>
             <span className='CountNumbers'>93%</span>
             <span className='CountText'>Accuracy</span>
           </div>
 
 
-          <div className="card" style={{ width: '10rem' }}>
+          <div className="card" style={{ width: '10rem',backgroundColor:'transparent' }}>
             <div className="icons">{<MdSecurity />}</div>
             <span className='CountNumbers'>100%</span>
             <span className='CountText'>Security</span>
