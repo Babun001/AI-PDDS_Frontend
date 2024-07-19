@@ -4,11 +4,8 @@
 }
 
 .sidebar {
-  /* width: 10%; */
   float: right;
   height: 100vh;
-  /* border: 1px solid black; */
-  /* margin: 1rem; */
   padding: 2rem 2rem;
   text-align: center;
 }
@@ -18,8 +15,13 @@
   color: rgb(0, 0, 0);
   text-decoration: none;
   padding: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
+}
+.sidebar :hover{
+  /* font-size: 1.5rem; */
+
+  
 }
 .menu {
   width: 100%;
@@ -36,7 +38,7 @@
   /* background-color: red; */
   display: grid;
   justify-content: center;
-  margin-top: 7rem;
+  margin-top: 10rem;
 }
 
 .Icontext{

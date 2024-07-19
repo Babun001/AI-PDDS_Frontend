@@ -4,7 +4,7 @@ import './Sidebar.css';
 import { FaHome } from "react-icons/fa"
 import { Link, NavLink } from 'react-router-dom';
 import { FaUserDoctor } from "react-icons/fa6";
-import { TbCheckupList } from "react-icons/tb";
+import { FaSquarePhone } from "react-icons/fa6";
 import { BsInfoCircleFill } from "react-icons/bs";
 import { IoIosPeople } from "react-icons/io";
 
@@ -17,11 +17,11 @@ import { MdLiveHelp } from "react-icons/md";
 
 export default function Sidebar({ children }) {
 
-    function red() {
-        alert(`Disable the menu!`);
+    function help() {
+        alert(`Help button is not ready yet!`);
     }
-    function green() {
-        alert(`Enable the menu!`);
+    function setting() {
+        alert(`Setting Will enable soon!`);
     }
     const menuItems = [
         {
@@ -37,12 +37,12 @@ export default function Sidebar({ children }) {
         {
             path: "/AboutUs",
             name: "AboutUs",
-            icon: <TbCheckupList />
+            icon: <IoIosPeople />
         },
         {
             path: "/ContactUs",
             name: "ContactUs",
-            icon: <IoIosPeople />
+            icon: <FaSquarePhone />
         },
         {
             path: "/info",
@@ -66,10 +66,10 @@ export default function Sidebar({ children }) {
 
 
                     <div className="lowpart">
-                        <div className='icons' onClick={green}>{<MdLiveHelp />}
+                        <div className='icons' onClick={help}>{<MdLiveHelp />}
                             <span className="Icontext">Help</span>
                         </div>
-                        <div className='icons' onClick={red}>{<IoSettingsSharp />}
+                        <div className='icons' onClick={setting}>{<IoSettingsSharp />}
                             <span className="Icontext">Setting</span>
 
                         </div>

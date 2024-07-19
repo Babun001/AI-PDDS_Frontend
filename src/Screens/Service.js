@@ -10,6 +10,8 @@ import Parkinson_img from "../Assets/Parkinson.jpg";
 import ratina_img from "../Assets/Ratina.jpg";
 import skin_img from "../Assets/skin.jpeg";
 
+// import videobg from "../Assets/Doctor01.mp4";
+
 export default function Service() {
   // const navigate = useNavigate();
 
@@ -61,7 +63,7 @@ export default function Service() {
   return (
     <>
       <div className="serviceBG">
-
+          {/* <video src={videobg} autoPlay loop muted></video> */}
         <div className="service">
           <div className="allbtns">
 

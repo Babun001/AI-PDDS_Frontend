@@ -1,9 +1,5 @@
 import React from 'react';
-// import Sidebar from '../Components/Sidebar';
-// import video01 from "../Assets/Doctor01.mp4"
-// import video02 from "../Assets/Doctor02.mp4"
-// import video03 from "../Assets/Doctor03.mp4"
-// import './Pages.css';
+
 import { HiUserGroup } from "react-icons/hi";
 import { FaHandHoldingMedical } from "react-icons/fa6";
 import { ImHappy } from "react-icons/im";
@@ -25,35 +21,35 @@ export default function Home() {
 
         <div className="dashbord">
           <div className="card" style={{ width: '10rem',backgroundColor:'transparent' }}>
-            <div className="icons">{<HiUserGroup />}</div>
-            <span className='CountNumbers'>0000</span>
+            <div className="icon">{<HiUserGroup />}</div>
+            <span className='CountNumbers' id='cases'>0000</span>
             <span className='CountText'>Users</span>
           </div>
 
 
           <div className="card" style={{ width: '10rem',backgroundColor:'transparent' }}>
-            <div className="icons">{<FaHandHoldingMedical />}</div>
+            <div className="icon">{<FaHandHoldingMedical />}</div>
             <span className='CountNumbers'>0000</span>
             <span className='CountText'>No. of Disease</span>
           </div>
 
 
           <div className="card" style={{ width: '10rem',backgroundColor:'transparent' }}>
-            <div className="icons">{<ImHappy />}</div>
+            <div className="icon">{<ImHappy />}</div>
             <span className='CountNumbers'>0000</span>
             <span className='CountText'>5-star Rating</span>
           </div>
 
 
           <div className="card" style={{ width: '10rem',backgroundColor:'transparent' }}>
-            <div className="icons">{<BsGraphUpArrow />}</div>
+            <div className="icon">{<BsGraphUpArrow />}</div>
             <span className='CountNumbers'>93%</span>
             <span className='CountText'>Accuracy</span>
           </div>
 
 
           <div className="card" style={{ width: '10rem',backgroundColor:'transparent' }}>
-            <div className="icons">{<MdSecurity />}</div>
+            <div className="icon">{<MdSecurity />}</div>
             <span className='CountNumbers'>100%</span>
             <span className='CountText'>Security</span>
           </div>
