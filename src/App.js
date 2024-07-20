@@ -12,7 +12,17 @@ import Liver from "./Screens/Disease Template/Liver.js";
 import Ratina from "./Screens/Disease Template/Ratina.js";
 import SkinCancer from "./Screens/Disease Template/SkinCancer.js";
 import ParkinsonDisease from "./Screens/Disease Template/ParkinsonDisease.js";
-// /Liver /Ratina  /SkinCancer  /ParkinsonDisease
+import Alzheimer from './Screens/Disease Template/Alzheimer.js';
+import BraibtnTumor from './Screens/Disease Template/BrainTumor.js';
+import BreastCancer from  './Screens/Disease Template/BreastCancer.js';
+import Covid from  './Screens/Disease Template/Covid.js';
+import Heart from  './Screens/Disease Template/Heart.js';
+import LungCancer from  './Screens/Disease Template/LungCancer.js';
+import Pneumonia from  './Screens/Disease Template/Pheumonia.js';
+import Tuberculosis from  './Screens/Disease Template/Tuberculosis .js';
+
+
+
 
 import Sidebar from './Components/Sidebar.jsx';
 
@@ -35,6 +45,14 @@ function App() {
           <Route exact path="/Ratina" element={<Ratina />} />
           <Route exact path="/SkinCancer" element={<SkinCancer />} />
           <Route exact path="/ParkinsonDisease" element={<ParkinsonDisease />} />
+          <Route exact path="/Alzheimer" element={< Alzheimer />} />
+          <Route exact path="/BrainTumor" element={< BraibtnTumor />} />
+          <Route exact path="/BreastCancer" element={< BreastCancer />} />
+          <Route exact path="/Covid" element={< Covid />} />
+          <Route exact path="/Heart" element={< Heart />} />
+          <Route exact path="/LungCancer" element={< LungCancer />} />
+          <Route exact path="/Pneumonia" element={< Pneumonia />} />
+          <Route exact path="/Tuberculosis" element={< Tuberculosis />} />
         </Routes>
       </Sidebar>
     </Router >
