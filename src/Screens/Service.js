@@ -9,6 +9,14 @@ import Liver_img from "../Assets/Liver.jpg";
 import Parkinson_img from "../Assets/Parkinson.jpg";
 import ratina_img from "../Assets/Ratina.jpg";
 import skin_img from "../Assets/skin.jpeg";
+import alzeimer from "../Assets/alzheimers.jpg";
+import brain from "../Assets/braintumors.jpg";
+import breast from "../Assets/breast_cancer.jpg";
+import covid from "../Assets/covid.avif";
+import Heart from "../Assets/heart.jpg";
+import Lung from "../Assets/lungcancer.jpg";
+import pheumonia from "../Assets/pneumonia.jpg";
+import Tuberculosis  from "../Assets/Tuberculosis.jpg";
 
 // import videobg from "../Assets/Doctor01.mp4";
 
@@ -21,6 +29,7 @@ export default function Service() {
       D_img: diabetes_img,
       nav: '/Diabetes',
       id : '01'
+
     },
 
     {
@@ -56,14 +65,69 @@ export default function Service() {
       D_img: skin_img,
       nav: '/SkinCancer',
       id : '06'
-    }
+    },
+
+    {
+      D_name: "alzheimer",
+      D_img: alzeimer,
+      nav: '',
+      id : '07'
+    },
+
+    {
+      D_name: "Brain Tumor",
+      D_img: brain,
+      nav: '',
+      id : '08'
+    },
+
+    {
+      D_name: "Breast Cancer",
+      D_img: breast,
+      nav: '',
+      id : '09'
+    },
+
+    {
+      D_name: "Covid",
+      D_img: covid,
+      nav: '',
+      id : '10'
+    },
+
+    {
+      D_name: "Heart",
+      D_img: Heart,
+      nav: '',
+      id : '11'
+    },
+
+    {
+      D_name: "Lung Cancer",
+      D_img: Lung,
+      nav: '',
+      id : '12'
+    },
+
+    {
+      D_name: "Pneumonia ",
+      D_img: pheumonia,
+      nav: '',
+      id : '13'
+    },
+    {
+      D_name: "Tuberculosis",
+      D_img: Tuberculosis,
+      nav: '',
+      id : '14'
+    },
+
   ]
 
 
   return (
     <>
       <div className="serviceBG">
-          {/* <video src={videobg} autoPlay loop muted></video> */}
         <div className="service">
           <div className="allbtns">
 

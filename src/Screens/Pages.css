@@ -53,12 +53,7 @@
   padding-top: 12rem;
 }
 
-
-
 /* CSS of Home.js */
-
-
-
 
 .home-container {
   background-image: url("../Assets/doctor02.jpg");
@@ -78,7 +73,6 @@
   padding: 20px;
   text-align: center;
   display: inline-block;
-  position: absolute;
 }
 
 .dashbord {
@@ -110,17 +104,38 @@
   font-weight: bold;
 }
 
-
 /* CSS of Info.js*/
 
-
-.info-container{
-  background-image: url('../Assets/Doctor4.jpg');
+.info-container {
+  background-image: url("../Assets/Doctor4.jpg");
   width: 100%;
-  height: 100vh;
+  height: 150vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  position:inherit;  
+  position: inherit;
+
 }
 
+.bg-text-info {
+  font-weight: bold;
+  position: relative;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+}
+
+.mainbody{
+  height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+.Heading{
+  margin: 2rem;
+  padding: 3rem;
+  text-align: justify;
+}
