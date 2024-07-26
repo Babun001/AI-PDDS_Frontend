@@ -17,28 +17,36 @@
   gap: 22px;
   background-color: transparent;
   text-align: center;
-  /* text-decoration: none; */
 }
 
 .card-img-top {
-  /* border: 2px solid blue; */
   width: 100%;
   height: 14vh;
   padding: 10px;
   border-radius: 20px;
 }
 
+.DiaseaseLink :hover {
+  background-color: #000;
+  color: rgb(183, 226, 255);
+}
+
 .text {
   font-size: 1rem;
   font-weight: bold;
-  /* text-decoration: none; */
+}
+
+.DiaseaseLink {
+  /* color: red; */
+  text-decoration: none;
+  /* border: 1px solid black; */
 }
 
 .card-body {
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-decoration: none;
+  padding: 0px;
+  margin: 10px;
 }
 
 .allbtns {
@@ -54,7 +62,7 @@
   padding: 10px;
   margin-top: 30px;
 }
-.service-text{
+.service-text {
   /* background-color: red; */
   font-weight: bold;
   position: relative;
@@ -67,7 +75,7 @@
   display: inline-block;
 }
 
-.service-text h2{
+.service-text h2 {
   font-weight: 700;
 }
 /* CSS of Home.js */
@@ -131,7 +139,6 @@
   background-position: center;
   background-size: cover;
   position: inherit;
-
 }
 
 .bg-text-info {
@@ -146,12 +153,12 @@
   display: inline-block;
 }
 
-.mainbody{
+.mainbody {
   height: 100vh;
   overflow-y: auto;
   scroll-behavior: smooth;
 }
-.Heading{
+.Heading {
   margin: 2rem;
   padding: 3rem;
   text-align: justify;
