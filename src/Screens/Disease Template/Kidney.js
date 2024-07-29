@@ -1,9 +1,8 @@
+
 import React from 'react';
+import heartBg from "../../Assets/heart03.jpg";
 import './Disease.css';
-import { useNavigate } from 'react-router-dom';
-
-import bgimg from "../../Assets/kidney02.jpg";
-
+import { useNavigate } from "react-router-dom";
 
 export default function Kidney() {
 
@@ -13,14 +12,14 @@ export default function Kidney() {
     <>
       <div className="diabetes-container" style={{ display: "flex" }}>
 
-        <img className="diabetes_bg" src={bgimg} alt="bg-img" />
         <div className="backbtn">
           <button className='btn btn-danger m-3' style={{ cursor: "pointer", fontWeight: "bold" }} onClick={() => navigator(-1)}>{"x"}</button>
         </div>
+        <img className="BackgroundImage" src={heartBg} alt="bg-img" />
 
         <div className="patientform bg-text mt-5  sticky-top text-dark fs-6">
           {/* <h1>This is form area!</h1> */}
-          <h2 className="mx-auto" style={{ display: 'flex', justifyContent: 'center' }}>Patient Form for Kidney Disease</h2>
+          <h2 className="mx-auto" style={{ display: 'flex', justifyContent: 'center' }}>Patient Form for Kidney</h2>
           <form >
 
 
@@ -43,7 +42,7 @@ export default function Kidney() {
                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="firstName"
                 placeholder="Enter Your Age"
                 name="Age"
-                // onChange={handleChange}
+              // onChange={handleChange}
 
               />
             </div>
@@ -63,15 +62,12 @@ export default function Kidney() {
             </div>
 
 
-            
-
-
             <div className="buttons">
               <button
                 type="button"
                 className="btn btn-success"
                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }}
-                >Check</button>
+              >Check</button>
               {/* create a popup window to show the output */}
               <button
                 type="reset"
