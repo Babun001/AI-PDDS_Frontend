@@ -2,7 +2,7 @@ import React from 'react';
 import './Disease.css';
 
 
-import bg from "../../Assets/heart.jpg";
+import heartBg from "../../Assets/heart03.jpg";
 import { useNavigate } from "react-router-dom";
 
 
@@ -16,16 +16,16 @@ export default function Heart() {
 
   return (
     <>
-      <div className='heart-container'>
+      <div className="diabetes-container" style={{ display: "flex" }}>
+
         <div className="backbtn">
           <button className='btn btn-danger m-3' style={{ cursor: "pointer", fontWeight: "bold" }} onClick={() => navigator(-1)}>{"x"}</button>
         </div>
+        <img className="BackgroundImage" src={heartBg} alt="bg-img" />
 
-        <img className='heart_bg' src={bg} alt="@" />
-        <div className="heartBody">
-
-          <h1>Patient Form for Heart Disease</h1>
-
+        <div className="patientform bg-text mt-5  sticky-top text-dark fs-6">
+          {/* <h1>This is form area!</h1> */}
+          <h2 className="mx-auto" style={{ display: 'flex', justifyContent: 'center' }}>Patient Form for Diabetes Melitus</h2>
           <form >
 
 
@@ -48,7 +48,7 @@ export default function Heart() {
                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="firstName"
                 placeholder="Enter Your Age"
                 name="Age"
-              // onChange={handleChange}
+                // onChange={handleChange}
 
               />
             </div>
@@ -68,135 +68,12 @@ export default function Heart() {
             </div>
 
 
-            <div className="form-group mt-3">
-              <label htmlFor="pregnancy">Pregnancy</label>
-              <input
-                type="text"
-                name="Pregnancies"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }}
-                id="pregnancy"
-                placeholder="How many children do you have?"
-              // onChange={handleChange}
-              />
-            </div>
-
-
-            <div className="form-group mt-3">
-              <label htmlFor="Glucose">Glucose</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }}
-                id="Glucose"
-                placeholder="Enter Glucose level"
-                name="Glucose"
-              // onChange={handleChange}
-              />
-            </div>
-
-
-            <div className="form-group mt-3">
-              <label htmlFor="BloodPressure">BloodPressure</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }}
-                id="BloodPressure"
-                placeholder="Enter Your Blood Pressure"
-                name="BloodPressure"
-              // onChange={handleChange}
-              />
-            </div>
-
-
-            <div className="form-group mt-3">
-              <label htmlFor="Insulin">Insulin</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }}
-                id="Insulin"
-                placeholder="Enter Your Insulin Rate"
-                name="Insulin"
-              // onChange={handleChange}
-              />
-            </div>
-
-
-            <div className="form-group mt-3">
-              <label htmlFor="BMI">BMI</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }}
-                id="BMI"
-                placeholder="Enter Your BMI Rate"
-                name="BMI"
-              // onChange={handleChange}
-              />
-            </div>
-
-            <div className="form-group mt-3">
-              <label htmlFor="BMI">Diabetes Pedigree Function</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }}
-                id="BMI"
-                placeholder="Enter DPF"
-                name="DiabetesPedigreeFunction"
-              // onChange={handleChange}
-              />
-            </div>
-
-            <div className="form-group mt-3">
-              <label htmlFor="Insulin">Insulin</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }}
-                id="Insulin"
-                placeholder="Enter Your Insulin Rate"
-                name="Insulin"
-              // onChange={handleChange}
-              />
-            </div>
-
-
-            <div className="form-group mt-3">
-              <label htmlFor="BMI">BMI</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }}
-                id="BMI"
-                placeholder="Enter Your BMI Rate"
-                name="BMI"
-              // onChange={handleChange}
-              />
-            </div>
-
-            <div className="form-group mt-3">
-              <label htmlFor="BMI">Diabetes Pedigree Function</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }}
-                id="BMI"
-                placeholder="Enter DPF"
-                name="DiabetesPedigreeFunction"
-              // onChange={handleChange}
-              />
-            </div>
-
-
             <div className="buttons">
               <button
                 type="button"
                 className="btn btn-success"
                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }}
-              >Check</button>
+                >Check</button>
               {/* create a popup window to show the output */}
               <button
                 type="reset"
@@ -205,10 +82,9 @@ export default function Heart() {
             </div>
 
           </form>
-
         </div>
-
       </div>
+
     </>
   );
 }
