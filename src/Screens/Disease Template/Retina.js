@@ -1,9 +1,9 @@
 import React from 'react';
-import heartBg from "../../Assets/heart03.jpg";
+import heartBg from "../../Assets/retinabg1.jpg";
 import './Disease.css';
 import { useNavigate } from "react-router-dom";
 
-export default function Ratina() {
+export default function Retina() {
 
   const navigator = useNavigate();
 

@@ -9,7 +9,7 @@ import Info from "./Screens/Info.js";
 import Diabetes from "./Screens/Disease Template/Diabetes.js";
 import Kidney from "./Screens/Disease Template/Kidney.js";
 import Liver from "./Screens/Disease Template/Liver.js";
-import Ratina from "./Screens/Disease Template/Ratina.js";
+import Retina from "./Screens/Disease Template/Retina.js";
 import SkinCancer from "./Screens/Disease Template/SkinCancer.js";
 import ParkinsonDisease from "./Screens/Disease Template/ParkinsonDisease.js";
 import Alzheimer from './Screens/Disease Template/Alzheimer.js';
@@ -42,7 +42,7 @@ function App() {
           <Route exact path="/Diabetes" element={<Diabetes />} />
           <Route exact path="/Kidney" element={<Kidney />} />
           <Route exact path="/Liver" element={<Liver />} />
-          <Route exact path="/Ratina" element={<Ratina />} />
+          <Route exact path="/Retina" element={<Retina />} />
           <Route exact path="/SkinCancer" element={<SkinCancer />} />
           <Route exact path="/ParkinsonDisease" element={<ParkinsonDisease />} />
           <Route exact path="/Alzheimer" element={< Alzheimer />} />

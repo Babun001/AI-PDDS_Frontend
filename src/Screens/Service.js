@@ -54,9 +54,9 @@ export default function Service() {
     },
 
     {
-      D_name: "Ratina",
+      D_name: "Retina",
       D_img: ratina_img,
-      nav: '/Ratina',
+      nav: '/Retina',
       id: '05'
     },
 
