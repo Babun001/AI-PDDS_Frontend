@@ -62,6 +62,227 @@ export default function Kidney() {
             </div>
 
 
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="BloodPressure" className="label">Blood Pressure</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="BloodPressure"
+                placeholder="Enter Blood Pressure"
+                name="BloodPressure"
+              // onChange={handleChange}
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="SpecificGravity " className="label">Specific Gravity</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="SpecificGravity"
+                placeholder="Enter Specific Gravity"
+                name="SpecificGravity"
+              // onChange={handleChange}
+              />
+            </div>
+            
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="Albumin " className="label">Albumin</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="SpecificGravity"
+                placeholder="Enter Albumin"
+                name="Albumin"
+              // onChange={handleChange}
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="Sugar  " className="label">Sugar</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="Sugar"
+                placeholder="Enter Sugar"
+                name="Sugar"
+              // onChange={handleChange}
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="RedBloodCell" className="label">Red Blood Cell</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="RedBloodCell"
+                placeholder="Enter Red Blood Cell"
+                name="RedBloodCell"
+              // onChange={handleChange}
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="PusCells " className="label">Pus Cells</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="PusCells"
+                placeholder="Enter Pus Cells"
+                name="PusCells"
+              // onChange={handleChange}
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="PusCellsClumps " className="label">Pus Cells Clumps</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="PusCellsClumps"
+                placeholder="Enter Pus Cells Clumps"
+                name="PusCellsClumps"
+              // onChange={handleChange}
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="Bacteria" className="label">Bacteria</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="Bacteria"
+                placeholder="Bacteria"
+                name="Bacteria"
+              // onChange={handleChange}
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="BloodGlucoseRandom" className="label">Blood Glucose Random</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="BloodGlucoseRandom"
+                placeholder="Enter Blood Glucose Random"
+                name="BloodGlucoseRandom"
+              // onChange={handleChange}
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="BloodUrea" className="label">Blood Urea</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="BloodUrea"
+                placeholder="Enter Blood Urea"
+                name="BloodUrea"
+              // onChange={handleChange}
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="SerumCreatinine " className="label">Serum Creatinine</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="SerumCreatinine"
+                placeholder="Enter Serum Creatinine"
+                name="SerumCreatinine"
+              // onChange={handleChange}
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="Sodium " className="label">Sodium</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="Sodium"
+                placeholder="Enter Sodium"
+                name="Sodium"
+              // onChange={handleChange}
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="Potassium " className="label">Potassium</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="Potassium"
+                placeholder="Enter Potassium"
+                name="Potassium"
+              // onChange={handleChange}
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="Haemoglobin" className="label">Haemoglobin</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="Haemoglobin"
+                placeholder="Enter Haemoglobin"
+                name="Haemoglobin"
+              // onChange={handleChange}
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="PackedCellVolume" className="label">Packed Cell Volume</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="PackedCellVolume"
+                placeholder="Enter Packed Cell Volume"
+                name="PackedCellVolume"
+              // onChange={handleChange}
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="WhiteBloodCellCount " className="label">White Blood Cell Count</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="WhiteBloodCellCount"
+                placeholder="Enter White Blood Cell Count"
+                name="WhiteBloodCellCount"
+              // onChange={handleChange}
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="RedBloodCellCount " className="label">Red Blood Cell Count</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="RedBloodCellCount"
+                placeholder="Enter Red Blood Cell Count"
+                name="RedBloodCellCount"
+              // onChange={handleChange}
+              />
+            </div>
+
+
             <div className="buttons">
               <button
                 type="button"
