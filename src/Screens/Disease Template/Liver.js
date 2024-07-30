@@ -63,6 +63,90 @@ export default function Liver() {
             </div>
 
 
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="TotalBilirubin" className="label">Total Bilirubin</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="TotalBilirubin"
+                placeholder="Enter Total Bilirubin"
+                name="TotalBilirubin"
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="DirectBilirubin" className="label">Direct Bilirubin</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="DirectBilirubin"
+                placeholder="Enter Direct Bilirubin"
+                name="DirectBilirubin"
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="AlkalinePhosphatase" className="label">Alkaline Phosphatase</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="AlkalinePhosphatase"
+                placeholder="Enter Alkaline Phosphatase"
+                name="AlkalinePhosphatase"
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="AlanineAminotransferase" className="label">Alanine Aminotransferase</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="AlanineAminotransferase"
+                placeholder="Enter Alanine Aminotransferase"
+                name="AlanineAminotransferase"
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="AspartateAminotransferase" className="label">Aspartate Aminotransferase</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="AspartateAminotransferase"
+                placeholder="Enter Aspartate Aminotransferase"
+                name="AspartateAminotransferase"
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="TotalProtein" className="label">Total Protein</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="TotalProtein"
+                placeholder="Enter Total Protein"
+                name="TotalProtein"
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="AlbuminAndGlobulinRatio" className="label">Albumin And Globulin Ratio</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="AlbuminAndGlobulinRatio"
+                placeholder="Enter Albumin And Globulin Ratio"
+                name="AlbuminAndGlobulinRatio"
+              />
+            </div>
+
+            {/* ------------------------------------------------------------------------------------------------------------------------------------- */}
             <div className="buttons">
               <button
                 type="button"
