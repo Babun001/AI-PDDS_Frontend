@@ -2,8 +2,8 @@
   float: left;
 }
 .BackgroundImage {
-    filter: blur(3px);
-    -webkit-filter: blur(3px);
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
     height: 100vh;
     width: 100%;
     background-position: center;
@@ -14,19 +14,19 @@
 }
 .patientform{
     background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.3); 
+    background-color: rgba(255, 255, 255, 0.3); 
     color: rgb(0, 0, 0);
     font-weight: bold;
     border: 2px solid #000000;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    width: 40%;
+    /* width: 40%; */
     padding: 20px;
     text-align: center;
-    height: 100vh;
+    height: 90vh;
     overflow-y: auto;
     scroll-behavior: smooth;
     border-radius: 1rem;

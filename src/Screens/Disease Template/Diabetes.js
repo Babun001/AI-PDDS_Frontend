@@ -3,7 +3,9 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
 import './Disease.css';
-import bgimg from "../../Assets/Diabetes.jpg";
+import bgimg from "../../Assets/imp01.jpg";
+// import bgimg from "../../Assets/imp02.jpg";
+// import bgimg from "../../Assets/imp03.jpg";
 
 export default function Diabetes() {
 

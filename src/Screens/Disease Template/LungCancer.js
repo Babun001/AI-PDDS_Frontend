@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import heartBg from "../../Assets/heart03.jpg";
+import heartBg from "../../Assets/lungcancer.jpg";
 import './Disease.css';
 import { useNavigate } from "react-router-dom";
 
