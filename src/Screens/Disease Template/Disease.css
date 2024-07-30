@@ -84,3 +84,21 @@
   overflow-y: auto;
   scroll-behavior: smooth;
 }
+
+
+/*-------------------Retina css---------------------------*/
+.FileUpload{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  border: 2px dashed #1475cf;
+  height: 30vh;
+  width: 50%;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 8rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+

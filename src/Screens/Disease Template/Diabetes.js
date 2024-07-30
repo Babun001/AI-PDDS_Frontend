@@ -29,6 +29,13 @@ export default function Diabetes() {
     };
 
     const handleSubmit = async (e) => {
+        
+        // for(let x = 0; x<Object.keys(data).length; x++){
+
+        //     if(Object.values(data)[x]===''){
+        //         alert(`invalid values`);
+        //     };
+        // }
         e.preventDefault();
         console.log(data);
         await fetchApi();
@@ -77,6 +84,7 @@ export default function Diabetes() {
                         <div className="form-group mt-2 font-weight-bold" >
                             <label htmlFor="firstName" className="label">Name</label>
                             <input
+                                required
                                 type="text"
                                 className="form-control"
                                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="firstName"
