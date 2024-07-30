@@ -1,5 +1,5 @@
 import React from 'react';
-import heartBg from "../../Assets/alzheimerbg.webp";
+import heartBg from "../../Assets/alzheimerbg02.avif";
 import './Disease.css';
 import { useNavigate } from "react-router-dom";
 

@@ -2,7 +2,7 @@ import React from 'react';
 import './Disease.css';
 
 
-import heartBg from "../../Assets/heart03.jpg";
+import heartBg from "../../Assets/heartbg.jpg";
 import { useNavigate } from "react-router-dom";
 
 
