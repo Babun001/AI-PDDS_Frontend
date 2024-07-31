@@ -136,6 +136,18 @@ export default function Liver() {
 
 
             <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="Albumin" className="label">Albumin</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="Albumin"
+                placeholder="Enter Total Albumin"
+                name="Albumin"
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
               <label htmlFor="AlbuminAndGlobulinRatio" className="label">Albumin And Globulin Ratio</label>
               <input
                 type="text"

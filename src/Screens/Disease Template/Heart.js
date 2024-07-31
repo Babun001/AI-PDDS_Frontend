@@ -68,6 +68,114 @@ export default function Heart() {
             </div>
 
 
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="ChestPain" className="label">Chest Pain</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="ChestPain"
+                placeholder="Do you have Chest Pain?"
+                name='ChestPain'
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="RestingBloodPressure" className="label">Resting Blood Pressure</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="RestingBloodPressure"
+                placeholder="Enter Resting Blood Pressure"
+                name='RestingBloodPressure'
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="Cholesterol" className="label">Cholesterol</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="Cholesterol"
+                placeholder="Enter Cholesterol"
+                name='Cholesterol'
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="FastingBloodSugar" className="label">Fasting Blood Sugar</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="FastingBloodSugar"
+                placeholder="Fasting Blood Sugar"
+                name='FastingBloodSugar'
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="RestingECG " className="label">Resting ECG</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="RestingECG"
+                placeholder="Enter Resting ECG"
+                name='RestingECG'
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="MaximumHeartRate " className="label">Maximum Heart Rate</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="MaximumHeartRate"
+                placeholder="Enter Maximum Heart Rate"
+                name='MaximumHeartRate'
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="ExerciseAngina " className="label">Exercise Angina</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="ExerciseAngina"
+                placeholder="Exercise Angina"
+                name='ExerciseAngina'
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="OldPeak " className="label">Old Peak</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="OldPeak"
+                placeholder="Enter Old Peak"
+                name='OldPeak'
+              />
+            </div>
+
+
+            <div className="form-group mt-2 font-weight-bold" >
+              <label htmlFor="STSlope " className="label">ST Slope</label>
+              <input
+                type="text"
+                className="form-control"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="STSlope"
+                placeholder="Enter ST Slope"
+                name='STSlope'
+              />
+            </div>
+
+            {/* -------------------------------------------------------------------------------------------------------------------------------- */}
             <div className="buttons">
               <button
                 type="button"
