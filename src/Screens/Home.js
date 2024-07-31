@@ -43,7 +43,7 @@ export default function Home() {
 
           <div className="card" style={{ width: '10rem',backgroundColor:'transparent' }}>
             <div className="icon">{<BsGraphUpArrow />}</div>
-            <span className='CountNumbers'>93%</span>
+            <span className='CountNumbers'>99%</span>
             <span className='CountText'>Accuracy</span>
           </div>
 
