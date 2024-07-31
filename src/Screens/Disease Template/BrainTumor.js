@@ -1,11 +1,15 @@
-import React from 'react';
+import {React,useState} from 'react';
 import heartBg from "../../Assets/brainbg1.jpeg";
 import './Disease.css';
 import { useNavigate } from "react-router-dom";
+import { MdCloudUpload } from "react-icons/md";
 
 export default function BraibtnTumor() {
 
   const navigator = useNavigate();
+
+  const [ fileName,setFileName ] = useState("No Selected File");
+  const [image, setImage] = useState(null);
 
   return (
     <>
@@ -33,32 +37,33 @@ export default function BraibtnTumor() {
             </div>
 
 
-            <div className="form-group mt-2 font-weight-bold" >
-              <label htmlFor="DOB" className="label">Age</label>
+            <div className="FileUpload" onClick={() =>
+              document.querySelector("#SelectImage").click()
+            }>
               <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="firstName"
-                placeholder="Enter Your Age"
-                name="Age"
-              // onChange={handleChange}
-
+                type="file"
+                className="fileInp"
+                id="SelectImage"
+                hidden
+                onChange={({ target: { files } }) => {
+                  files[0] && setFileName(files[0].name)
+                  if (files) {
+                    setImage(URL.createObjectURL(files[0]))
+                  }
+                }}
               />
+              {
+                image
+                  ?
+                  <img src={image} width={300} height={200} alt={fileName} />
+                  :
+                  <>
+                    <MdCloudUpload color='#1475cf' size={120} />
+                    <p>Browse Files To Upload</p>
+                  </>
+              }
             </div>
-
-
-            <div className="form-group mt-3">
-              <label htmlFor="gender">Gender</label>
-              <select
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }}
-                id="gender">
-                <option defaultValue>Select Gender</option>
-                <option>Male</option>
-                <option>Female</option>
-                <option>Other</option>
-              </select>
-            </div>
+            <span className='filenamespan'><u>{fileName}</u></span>
 
 
             <div className="buttons">
@@ -71,6 +76,10 @@ export default function BraibtnTumor() {
               <button
                 type="reset"
                 className="btn btn-danger"
+                onClick={() =>{
+                  setImage(null);
+                  setFileName("No Selected File");
+                }}
                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }}>Clear Form</button>
             </div>
 

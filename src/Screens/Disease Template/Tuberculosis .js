@@ -1,11 +1,16 @@
-import React from 'react';
+import { React, useState } from 'react';
 import heartBg from "../../Assets/tuberculosisbg.jpg";
 import './Disease.css';
 import { useNavigate } from "react-router-dom";
+import { MdCloudUpload } from "react-icons/md";
+
 
 export default function Tuberculosis() {
 
   const navigator = useNavigate();
+  const [image, setImage] = useState(null);
+  const [fileName, setFileName] = useState("No Selected File");
+
 
   return (
     <>
@@ -32,33 +37,34 @@ export default function Tuberculosis() {
               />
             </div>
 
-
-            <div className="form-group mt-2 font-weight-bold" >
-              <label htmlFor="DOB" className="label">Age</label>
+            <div className="FileUpload" onClick={() =>
+              document.querySelector("#SelectImage").click()
+            }>
               <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="firstName"
-                placeholder="Enter Your Age"
-                name="Age"
-              // onChange={handleChange}
-
+                type="file"
+                className="fileInp"
+                id="SelectImage"
+                hidden
+                onChange={({ target: { files } }) => {
+                  files[0] && setFileName(files[0].name)
+                  if (files) {
+                    setImage(URL.createObjectURL(files[0]))
+                  }
+                }}
               />
+              {
+                image
+                  ?
+                  <img src={image} width={300} height={200} alt={fileName} />
+                  :
+                  <>
+                    <MdCloudUpload color='#1475cf' size={120} />
+                    <p>Browse Files To Upload</p>
+                  </>
+              }
             </div>
+            <span className='filenamespan'><u>{fileName}</u></span>
 
-
-            <div className="form-group mt-3">
-              <label htmlFor="gender">Gender</label>
-              <select
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }}
-                id="gender">
-                <option defaultValue>Select Gender</option>
-                <option>Male</option>
-                <option>Female</option>
-                <option>Other</option>
-              </select>
-            </div>
 
 
             <div className="buttons">
@@ -71,6 +77,10 @@ export default function Tuberculosis() {
               <button
                 type="reset"
                 className="btn btn-danger"
+                onClick={() => {
+                  setImage(null);
+                  setFileName("No Selected File");
+                }}
                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }}>Clear Form</button>
             </div>
 
