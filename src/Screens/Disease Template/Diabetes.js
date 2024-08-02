@@ -4,8 +4,6 @@ import axios from "axios";
 import { useState } from "react";
 import './Disease.css';
 import bgimg from "../../Assets/imp01.jpg";
-// import bgimg from "../../Assets/imp02.jpg";
-// import bgimg from "../../Assets/imp03.jpg";
 
 export default function Diabetes() {
 
@@ -29,13 +27,6 @@ export default function Diabetes() {
     };
 
     const handleSubmit = async (e) => {
-        
-        // for(let x = 0; x<Object.keys(data).length; x++){
-
-        //     if(Object.values(data)[x]===''){
-        //         alert(`invalid values`);
-        //     };
-        // }
         e.preventDefault();
         console.log(data);
         await fetchApi();
@@ -96,7 +87,7 @@ export default function Diabetes() {
                         <div className="form-group mt-2 font-weight-bold" >
                             <label htmlFor="DOB" className="label">Age</label>
                             <input
-                                type="text"
+                                type="number"
                                 className="form-control"
                                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="firstName"
                                 placeholder="Enter Your Age"
@@ -124,7 +115,7 @@ export default function Diabetes() {
                         <div className="form-group mt-3">
                             <label htmlFor="pregnancy">Pregnancy</label>
                             <input
-                                type="text"
+                                type="number"
                                 name="Pregnancies"
                                 className="form-control"
                                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }}

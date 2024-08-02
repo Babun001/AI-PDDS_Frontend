@@ -76,30 +76,6 @@ export default function Liver() {
 
 
             <div className="form-group mt-2 font-weight-bold" >
-              <label htmlFor="DirectBilirubin" className="label">Direct Bilirubin</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="DirectBilirubin"
-                placeholder="Enter Direct Bilirubin"
-                name="DirectBilirubin"
-              />
-            </div>
-
-
-            <div className="form-group mt-2 font-weight-bold" >
-              <label htmlFor="AlkalinePhosphatase" className="label">Alkaline Phosphatase</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="AlkalinePhosphatase"
-                placeholder="Enter Alkaline Phosphatase"
-                name="AlkalinePhosphatase"
-              />
-            </div>
-
-
-            <div className="form-group mt-2 font-weight-bold" >
               <label htmlFor="AlanineAminotransferase" className="label">Alanine Aminotransferase</label>
               <input
                 type="text"
