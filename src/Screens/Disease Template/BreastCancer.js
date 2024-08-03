@@ -83,7 +83,6 @@ export default function BreastCancer() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setBreastData({...breastData, [name]:value});
-
   }
 
 
