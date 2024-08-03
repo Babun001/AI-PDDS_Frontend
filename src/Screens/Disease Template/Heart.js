@@ -9,6 +9,34 @@ import { useNavigate } from "react-router-dom";
 
 export default function Heart() {
 
+  const Heart_params = [
+    { param_id: '01', type: "number", param_name: 'Age', param_lable: 'Age' },
+    { param_id: '01', type: "number", param_name: 'ChestPainType', param_lable: 'ChestPainType' },
+    { param_id: '01', type: "number", param_name: 'RestingBP', param_lable: 'RestingBP' },
+    { param_id: '01', type: "number", param_name: 'Cholesterol', param_lable: 'Cholesterol' },
+    { param_id: '01', type: "number", param_name: 'FastingBS', param_lable: 'FastingBS' },
+    { param_id: '01', type: "number", param_name: 'RestingECG', param_lable: 'RestingECG' },
+    { param_id: '01', type: "number", param_name: 'MaxHR', param_lable: 'MaxHR' },
+    { param_id: '01', type: "number", param_name: 'ExerciseAngina', param_lable: 'ExerciseAngina' },
+    { param_id: '01', type: "number", param_name: 'Oldpeak', param_lable: 'Oldpeak' },
+    { param_id: '01', type: "number", param_name: 'ST_Slope', param_lable: 'ST Slope' }
+  ]
+
+
+  const Initial_heart_data = {
+    Age: '',
+    Sex: '',
+    ChestPainType: '',
+    RestingBP: '',
+    Cholesterol: '',
+    FastingBS: '',
+    RestingECG: '',
+    MaxHR: '',
+    ExerciseAngina: '',
+    Oldpeak: '',
+    ST_Slope: ''
+  }
+
   const navigator = useNavigate();
 
 
@@ -40,26 +68,12 @@ export default function Heart() {
             </div>
 
 
-            <div className="form-group mt-2 font-weight-bold" >
-              <label htmlFor="DOB" className="label">Age</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="firstName"
-                placeholder="Enter Your Age"
-                name="Age"
-                // onChange={handleChange}
-
-              />
-            </div>
-
-
             <div className="form-group mt-3">
-              <label htmlFor="gender">Gender</label>
+              <label htmlFor="Sex">Sex</label>
               <select
                 className="form-control"
                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }}
-                id="gender">
+                id="Sex">
                 <option defaultValue>Select Gender</option>
                 <option>Male</option>
                 <option>Female</option>
@@ -68,112 +82,22 @@ export default function Heart() {
             </div>
 
 
-            <div className="form-group mt-2 font-weight-bold" >
-              <label htmlFor="ChestPain" className="label">Chest Pain</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="ChestPain"
-                placeholder="Do you have Chest Pain?"
-                name='ChestPain'
-              />
-            </div>
+            {
+              Heart_params.map((para) => (
+                <div className="form-group mt-2 font-weight-bold" >
+                  <label htmlFor={para.param_name} className="label">{para.param_lable}</label>
+                  <input
+                    type={para.type}
+                    className="form-control"
+                    style={{ border: 'none', outline: 'none', fontSize: '1rem' }} 
+                    id={para.param_name}
+                    name={para.param_name}
+                    placeholder={"Enter "+ para.param_lable}
+                  />
+                </div>
+              ))
+            }
 
-
-            <div className="form-group mt-2 font-weight-bold" >
-              <label htmlFor="RestingBloodPressure" className="label">Resting Blood Pressure</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="RestingBloodPressure"
-                placeholder="Enter Resting Blood Pressure"
-                name='RestingBloodPressure'
-              />
-            </div>
-
-
-            <div className="form-group mt-2 font-weight-bold" >
-              <label htmlFor="Cholesterol" className="label">Cholesterol</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="Cholesterol"
-                placeholder="Enter Cholesterol"
-                name='Cholesterol'
-              />
-            </div>
-
-
-            <div className="form-group mt-2 font-weight-bold" >
-              <label htmlFor="FastingBloodSugar" className="label">Fasting Blood Sugar</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="FastingBloodSugar"
-                placeholder="Fasting Blood Sugar"
-                name='FastingBloodSugar'
-              />
-            </div>
-
-
-            <div className="form-group mt-2 font-weight-bold" >
-              <label htmlFor="RestingECG " className="label">Resting ECG</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="RestingECG"
-                placeholder="Enter Resting ECG"
-                name='RestingECG'
-              />
-            </div>
-
-
-            <div className="form-group mt-2 font-weight-bold" >
-              <label htmlFor="MaximumHeartRate " className="label">Maximum Heart Rate</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="MaximumHeartRate"
-                placeholder="Enter Maximum Heart Rate"
-                name='MaximumHeartRate'
-              />
-            </div>
-
-
-            <div className="form-group mt-2 font-weight-bold" >
-              <label htmlFor="ExerciseAngina " className="label">Exercise Angina</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="ExerciseAngina"
-                placeholder="Exercise Angina"
-                name='ExerciseAngina'
-              />
-            </div>
-
-
-            <div className="form-group mt-2 font-weight-bold" >
-              <label htmlFor="OldPeak " className="label">Old Peak</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="OldPeak"
-                placeholder="Enter Old Peak"
-                name='OldPeak'
-              />
-            </div>
-
-
-            <div className="form-group mt-2 font-weight-bold" >
-              <label htmlFor="STSlope " className="label">ST Slope</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="STSlope"
-                placeholder="Enter ST Slope"
-                name='STSlope'
-              />
-            </div>
 
             {/* -------------------------------------------------------------------------------------------------------------------------------- */}
             <div className="buttons">
@@ -181,7 +105,7 @@ export default function Heart() {
                 type="button"
                 className="btn btn-success"
                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }}
-                >Check</button>
+              >Check</button>
               {/* create a popup window to show the output */}
               <button
                 type="reset"
