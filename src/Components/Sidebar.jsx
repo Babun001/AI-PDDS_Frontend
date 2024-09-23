@@ -2,7 +2,7 @@ import './Sidebar.css';
 // import { motion } from "framer-motion"
 
 import { FaHome } from "react-icons/fa"
-import { Link, NavLink } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 import { FaUserDoctor } from "react-icons/fa6";
 import { FaSquarePhone } from "react-icons/fa6";
 import { BsInfoCircleFill } from "react-icons/bs";
@@ -56,13 +56,14 @@ export default function Sidebar({ children }) {
                 <div className="sidebar">
 
                     {menuItems.map((route) => (
-                        <NavLink className="navlink" style={{textDecoration:"none"}} to={route.path} key={route.name}>
-                            <div className="icons">
+                        <NavLink className="navlink" style={{ textDecoration: "none" }} to={route.path} key={route.name}>
+                            <div className="icons" style={{ color: 'black' }}>
                                 {route.icon}
-                                <Link className="Icontext"style={{textDecoration:"none",color:'black'}}  to={route.path}>{route.name}</Link>
+                                <span className="Icontext">{route.name}</span>
                             </div>
                         </NavLink>
                     ))}
+
 
 
                     <div className="lowpart">
