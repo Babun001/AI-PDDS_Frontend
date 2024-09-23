@@ -4,6 +4,7 @@ import { React, useState } from 'react';
 import heartBg from "../../Assets/liverbg.jpg";
 import './Disease.css';
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 export default function Liver() {
 
@@ -46,7 +47,7 @@ export default function Liver() {
     {
       param_id: '5',
       type: "number",
-      param_name: 'Total_Protines',
+      param_name: 'Total_Proteins',
       param_lable: 'Total Protines',
       placeholder: 'Enter Total Protines'
     },
@@ -67,31 +68,60 @@ export default function Liver() {
   ]
 
   const liver_initial_value = {
-    Age:"",
-    Gender:"",
-    Total_Bilirubin:"",
-    Alamine_Aminotransferase:"",
-    Aspartate_Aminotransferase:"",
-    Total_Protines:"",
-    Albumin:"",
-    Albumin_and_Globulin_Ratio:""
+    Age: "",
+    Gender: "",
+    Total_Bilirubin: "",
+    Alamine_Aminotransferase: "",
+    Aspartate_Aminotransferase: "",
+    Total_Proteins: "",
+    Albumin: "",
+    Albumin_and_Globulin_Ratio: ""
   }
 
   const [liverData, setLiverData] = useState(liver_initial_value);
 
-  const handleChange = (e) =>{
-    const {name,value} = e.target;
-    setLiverData({...liverData, [name]:value});
-
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setLiverData({ ...liverData, [name]: value });
   }
 
-  const handleSubmit=(e)=>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(liverData);
+    console.log('Frontend',liverData);
+    // console.log(liverData.Gender)
+    await fetchApi();
   }
 
-  const handleClear = () =>{
+  const handleClear = () => {
     setLiverData(liver_initial_value);
+  }
+
+  const fetchApi = async () => {
+    try {
+      let gender = 0;
+      if(liverData.Gender === "Male"){
+        gender = 1;
+      }
+
+      const result = await axios.get('http://127.0.0.1:8080/api/lv', {
+        params: {
+          Age : liverData.Age,
+          Gender : gender,
+          Total_Bilirubin : liverData.Total_Bilirubin,
+          Alamine_Aminotransferase : liverData.Aspartate_Aminotransferase,
+          Aspartate_Aminotransferase : liverData.Aspartate_Aminotransferase,
+          Total_Proteins : liverData.Total_Proteins,
+          Albumin : liverData.Albumin,
+          Albumin_and_Globulin_Ratio : liverData.Albumin_and_Globulin_Ratio
+        }
+      });
+      alert(result.data);
+      console.log(result);
+
+    } catch (error) {
+      console.log(`Error to fetch /api/lv `, error);
+
+    }
   }
 
 
@@ -132,7 +162,7 @@ export default function Liver() {
                 id="Gender"
                 name='Gender'
                 onChange={handleChange}
-                >
+              >
                 <option defaultValue>Select Gender</option>
                 <option>Male</option>
                 <option>Female</option>
@@ -152,8 +182,8 @@ export default function Liver() {
                     placeholder={para.placeholder}
                     // value={parkinsonData[par.Name]}
                     name={para.param_name}
-                  // id={par.Name}
-                  onChange={handleChange}
+                    // id={par.Name}
+                    onChange={handleChange}
                   />
                 </div>
               ))
