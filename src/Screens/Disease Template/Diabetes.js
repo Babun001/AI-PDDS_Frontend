@@ -35,19 +35,22 @@ export default function Diabetes() {
 
     const fetchApi = async () => {
         try {
-            const result = await axios.get('http://127.0.0.1:8080/api/db', {
-                params: {
-                    Pregnancies: data.Pregnancies,
-                    Glucose: data.Glucose,
-                    BloodPressure: data.BloodPressure,
-                    Insulin: data.Insulin,
-                    BMI: data.BMI,
-                    DiabetesPedigreeFunction: data.DiabetesPedigreeFunction,
-                    Age: data.Age
-                }
+            const result = await axios.post('http://127.0.0.1:8085/diabetes/api/v1/diabetes-Detection', {
+
+                Pregnancies: data.Pregnancies,
+                Glucose: data.Glucose,
+                BloodPressure: data.BloodPressure,
+                Insulin: data.Insulin,
+                BMI: data.BMI,
+                DiabetesPedigreeFunction: data.DiabetesPedigreeFunction,
+                Age: data.Age
+
+
+            },{
+                headers:{ "Content-Type": "application/json" }
             })
             alert(result.data);
-            console.log(result);
+            console.log(result.data.data.patientData);
         }
         catch (error) {
             console.error('Error fetching data:', error);
