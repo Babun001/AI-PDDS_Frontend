@@ -1,10 +1,65 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import heartBg from "../../Assets/kidneybg.webp";
 import './Disease.css';
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 export default function Kidney() {
+
+  const initialData = {
+    age: "",
+    blood_pressure: "",
+    specific_gravity: "",
+    albumin: "",
+    sugar: "",
+    blood_glucose_random: "",
+    blood_urea: "",
+    serum_creatinine: "",
+    sodium: "",
+    potassium: "",
+    haemoglobin: "",
+    packed_cell_volume: "",
+    white_blood_cell_count: "",
+    red_blood_cell_count: ""
+  }
+
+  const [data, setData] = useState(initialData);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setData({ ...data, [name]: value });
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetchApi();
+    console.log(`fetchApi working...`);
+    
+  }
+  
+  const fetchApi = async() =>{
+    try {
+        const response = await axios.post("",{data},{
+          method: {"Content-Type": "application/json"}
+        });
+
+        if(!response){
+          console.error("Server unable to detect kidney disease detection response!");
+          throw {"Error":"Error to fetch data"};
+        }
+
+    } catch (error) {
+      console.error("Unable to fetch data from backend at kidney disease detection! : ",error);
+      throw error;
+    }
+  }
+
+  // useEffect(()=>{
+  //   console.log(data);
+    
+  // },[data])
+
 
   const navigator = useNavigate();
 
@@ -24,43 +79,18 @@ export default function Kidney() {
 
 
             <div className="form-group mt-2 font-weight-bold" >
-              <label htmlFor="firstName" className="label">Name</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="firstName"
-                placeholder="Enter Your Name"
-              />
-            </div>
-
-
-            <div className="form-group mt-2 font-weight-bold" >
               <label htmlFor="DOB" className="label">Age</label>
               <input
-                type="text"
+                type="number"
                 className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="firstName"
+                style={{ border: 'none', outline: 'none', fontSize: '1rem' }}
                 placeholder="Enter Your Age"
                 name="Age"
-              // onChange={handleChange}
+                onChange={handleChange}
+                // value={data.age}
 
               />
             </div>
-
-
-            <div className="form-group mt-3">
-              <label htmlFor="gender">Gender</label>
-              <select
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }}
-                id="gender">
-                <option defaultValue>Select Gender</option>
-                <option>Male</option>
-                <option>Female</option>
-                <option>Other</option>
-              </select>
-            </div>
-
 
             <div className="form-group mt-2 font-weight-bold" >
               <label htmlFor="BloodPressure" className="label">Blood Pressure</label>
@@ -70,7 +100,8 @@ export default function Kidney() {
                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="BloodPressure"
                 placeholder="Enter Blood Pressure"
                 name="BloodPressure"
-              // onChange={handleChange}
+                onChange={handleChange}
+                // value={data.blood_pressure}
               />
             </div>
 
@@ -83,10 +114,11 @@ export default function Kidney() {
                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="SpecificGravity"
                 placeholder="Enter Specific Gravity"
                 name="SpecificGravity"
-              // onChange={handleChange}
+                onChange={handleChange}
+                // value={data.specific_gravity}
               />
             </div>
-            
+
 
             <div className="form-group mt-2 font-weight-bold" >
               <label htmlFor="Albumin " className="label">Albumin</label>
@@ -96,7 +128,8 @@ export default function Kidney() {
                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="SpecificGravity"
                 placeholder="Enter Albumin"
                 name="Albumin"
-              // onChange={handleChange}
+                onChange={handleChange}
+                // value={data.albumin}
               />
             </div>
 
@@ -109,59 +142,8 @@ export default function Kidney() {
                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="Sugar"
                 placeholder="Enter Sugar"
                 name="Sugar"
-              // onChange={handleChange}
-              />
-            </div>
-
-
-            <div className="form-group mt-2 font-weight-bold" >
-              <label htmlFor="RedBloodCell" className="label">Red Blood Cell</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="RedBloodCell"
-                placeholder="Enter Red Blood Cell"
-                name="RedBloodCell"
-              // onChange={handleChange}
-              />
-            </div>
-
-
-            <div className="form-group mt-2 font-weight-bold" >
-              <label htmlFor="PusCells " className="label">Pus Cells</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="PusCells"
-                placeholder="Enter Pus Cells"
-                name="PusCells"
-              // onChange={handleChange}
-              />
-            </div>
-
-
-            <div className="form-group mt-2 font-weight-bold" >
-              <label htmlFor="PusCellsClumps " className="label">Pus Cells Clumps</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="PusCellsClumps"
-                placeholder="Enter Pus Cells Clumps"
-                name="PusCellsClumps"
-              // onChange={handleChange}
-              />
-            </div>
-
-
-            <div className="form-group mt-2 font-weight-bold" >
-              <label htmlFor="Bacteria" className="label">Bacteria</label>
-              <input
-                type="text"
-                className="form-control"
-                style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="Bacteria"
-                placeholder="Bacteria"
-                name="Bacteria"
-              // onChange={handleChange}
+                onChange={handleChange}
+                // value={data.sugar}
               />
             </div>
 
@@ -174,7 +156,8 @@ export default function Kidney() {
                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="BloodGlucoseRandom"
                 placeholder="Enter Blood Glucose Random"
                 name="BloodGlucoseRandom"
-              // onChange={handleChange}
+                onChange={handleChange}
+                // value={data.blood_glucose_random}
               />
             </div>
 
@@ -187,7 +170,8 @@ export default function Kidney() {
                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="BloodUrea"
                 placeholder="Enter Blood Urea"
                 name="BloodUrea"
-              // onChange={handleChange}
+                onChange={handleChange}
+                // value={data.blood_urea}
               />
             </div>
 
@@ -200,7 +184,8 @@ export default function Kidney() {
                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="SerumCreatinine"
                 placeholder="Enter Serum Creatinine"
                 name="SerumCreatinine"
-              // onChange={handleChange}
+                onChange={handleChange}
+                // value={data.serum_creatinine}
               />
             </div>
 
@@ -213,7 +198,8 @@ export default function Kidney() {
                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="Sodium"
                 placeholder="Enter Sodium"
                 name="Sodium"
-              // onChange={handleChange}
+                onChange={handleChange}
+                // value={data.sodium}
               />
             </div>
 
@@ -226,7 +212,8 @@ export default function Kidney() {
                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="Potassium"
                 placeholder="Enter Potassium"
                 name="Potassium"
-              // onChange={handleChange}
+                onChange={handleChange}
+                // value={data.potassium}
               />
             </div>
 
@@ -239,7 +226,8 @@ export default function Kidney() {
                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="Haemoglobin"
                 placeholder="Enter Haemoglobin"
                 name="Haemoglobin"
-              // onChange={handleChange}
+                onChange={handleChange}
+                // value={data.haemoglobin}
               />
             </div>
 
@@ -252,7 +240,8 @@ export default function Kidney() {
                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="PackedCellVolume"
                 placeholder="Enter Packed Cell Volume"
                 name="PackedCellVolume"
-              // onChange={handleChange}
+                onChange={handleChange}
+                // value={data.packed_cell_volume}
               />
             </div>
 
@@ -265,7 +254,8 @@ export default function Kidney() {
                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="WhiteBloodCellCount"
                 placeholder="Enter White Blood Cell Count"
                 name="WhiteBloodCellCount"
-              // onChange={handleChange}
+                onChange={handleChange}
+                // value={data.white_blood_cell_count}
               />
             </div>
 
@@ -278,16 +268,18 @@ export default function Kidney() {
                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }} id="RedBloodCellCount"
                 placeholder="Enter Red Blood Cell Count"
                 name="RedBloodCellCount"
-              // onChange={handleChange}
+                onChange={handleChange}
+                // value={data.red_blood_cell_count}
               />
             </div>
 
 
             <div className="buttons">
               <button
-                type="button"
+                type="submit"
                 className="btn btn-success"
                 style={{ border: 'none', outline: 'none', fontSize: '1rem' }}
+                onClick={handleSubmit}
               >Check</button>
               {/* create a popup window to show the output */}
               <button
